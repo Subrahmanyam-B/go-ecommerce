@@ -7,6 +7,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+// Here a struct is created to add Reciever functions to it
 type UserHandler struct {
 	// svc UserService
 }
