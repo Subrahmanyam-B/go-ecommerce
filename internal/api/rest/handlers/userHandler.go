@@ -49,7 +49,6 @@ func (h *UserHandler) Register(ctx *fiber.Ctx) error {
 	err := ctx.BodyParser(&user)
 
 	if err != nil {
-
 		return ctx.Status(http.StatusBadRequest).JSON(&fiber.Map{
 			"message": "please enter valid input",
 		})
@@ -58,7 +57,6 @@ func (h *UserHandler) Register(ctx *fiber.Ctx) error {
 	token, err := h.service.SignUp(user)
 
 	if err != nil {
-
 		return ctx.Status(http.StatusInternalServerError).JSON(&fiber.Map{
 			"message": "error on signup",
 		})
